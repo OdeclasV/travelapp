@@ -1,0 +1,37 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.debug.js"></script>
+
+  <section id= "/traveler_submit">
+        
+       <div class="traveler_info"> You have added the following traveler</div>
+       <div>
+           <p>Name: {{this.name}}</p>
+           <p>Last Name: {{this.last_name}}</p>
+           <p>Date: {{this.date}}</p>
+           <p>Airline: {{this.airline}}</p>
+
+       </div>
+       
+
+
+<h1>create PDF here</h1>
+<button id="pdf">Click here</button>
+
+<script>
+	
+	var createPDF = document.getElementById('pdf');
+
+	createPDF.onclick = function(){
+		var doc = new jsPDF()
+
+		doc.text('{{this.name}}', 10, 10)
+		doc.save('a4.pdf')
+
+	
+	}
+
+	
+</script>
+
+
+
+    </section>
