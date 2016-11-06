@@ -2,10 +2,21 @@
 var express = require('express')
 var bodyParser = require('body-parser')
 var handlebrs = require('express-handlebars')
+var mongoose = require('mongoose')
+
+var uristring = "mongodb://heroku_fwpbd99q:mqqn40e20u5lfrudac4ac2i519@ds161295.mlab.com:61295/heroku_fwpbd99q"
 
 //Connecting to my DB using Mongoose
-var mongoose = require('mongoose')
-mongoose.connect('mongodb://localhost:27017/traveler')
+
+mongoose.connect(uristring, function (err, res){
+	if(err) {
+		console.log('ERROR connecting to:' + uristring + '.' + err)
+	} else {
+		console.log('Succeded connected to:' + uristring)
+	}
+})
+// var mongoose = require('mongoose')
+// mongoose.connect('mongodb://localhost:27017/traveler')
 
 //Adding my model 
 var Traveler = require('./models/traveler.js')
@@ -74,7 +85,8 @@ app.get('*', function( req, res){
 })
 
 
+app.listen( process.env.PORT || 3000, function() {
 
+  console.log( 'listening on 3000' )
 
-app.listen(3000)
-console.log("Sever running on port 3000")
+})
