@@ -1,3 +1,31 @@
-<h1>Welcome!</h1>
+<h1>Welcome to TravelApp</h1>
 
-<h3>Please add information about the <a href="/person_entry">traveler</a>, <a href="person_info">create a PDF file</a> or search by current entries</h3>
+<h3>Please add information about the traveler <a href="/person_entry">here</a>, or search by current entries</h3>
+
+<form action="/person_info">
+  Search TravelApp:
+  <input type="search" name="TravelApp" value="" id="app_search">
+  <input type="submit" id="app_submit">
+  <input type="reset">
+</form>
+
+<script>
+
+var express = require('express')
+var bodyParser = require('body-parser')
+
+var app = express();
+
+var submit = document.getElementById('app_submit');
+	submit.onclick = function(){
+		app.get('')
+	}
+
+	// var search = document.getElementById('app_search');
+	// if(search.value == ""){
+	// 	console.log('value added')
+	// }
+
+</script>
+
+
