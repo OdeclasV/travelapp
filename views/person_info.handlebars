@@ -24,7 +24,11 @@
 		var doc = new jsPDF()
 
 		doc.text('{{this.name}}', 10, 10)
-		doc.save('a4.pdf')
+		doc.text('{{this.last_name}}', 10, 10)
+		doc.text('{{this.date}}', 10, 10)
+		doc.text('{{this.airline}}', 10, 10)
+
+		doc.save('traveler.pdf')
 
 	
 	}
