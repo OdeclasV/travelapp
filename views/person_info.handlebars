@@ -23,12 +23,14 @@
 	createPDF.onclick = function(){
 		var doc = new jsPDF()
 
-		doc.text('{{this.name}}', 10, 10)
-		doc.text('{{this.last_name}}', 10, 10)
-		doc.text('{{this.date}}', 10, 10)
-		doc.text('{{this.airline}}', 10, 10)
+		doc.text('{{this.name}}', 20, 20);
+		doc.text('{{this.last_name}}', 20, 20);
+		doc.text('{{this.date}}', 20, 20);
+		doc.text('{{this.airline}}', 20, 20);
 
 		doc.save('traveler.pdf')
+
+		doc.output('datauri');
 
 	
 	}

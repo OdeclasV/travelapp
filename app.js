@@ -6,8 +6,6 @@ var mongoose = require('mongoose')
 
 var uristring = "mongodb://heroku_hzlphnml:qgsie3j67d9fk2omoc2dcsnd8v@ds147167.mlab.com:47167/heroku_hzlphnml" 
 
-// var uristring = "mongodb://vsalcedo:VICtor2206@ds033107.mlab.com:33107/trav3lapp" 
-
 //Connecting to my DB using Mongoose
 
 mongoose.connect(uristring, function (err, res){
@@ -17,10 +15,8 @@ mongoose.connect(uristring, function (err, res){
 		console.log('Succeded connected to:' + uristring)
 	}
 })
-// var mongoose = require('mongoose')
-// mongoose.connect('mongodb://localhost:27017/traveler')
 
-//Adding my model 
+//Adding models 
 var Traveler = require('./models/traveler.js')
 
 //Initializing my app
@@ -39,7 +35,7 @@ app.use(express.static(__dirname + '/public'))
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended:true }))
 
- 
+//Routes
 app.get('/', function( req, res ){
 
 	res.render('home')
@@ -67,6 +63,8 @@ app.get('/person_info/:id', function(req,res){
 	})
 	
 })
+
+//Looking for submited person in the form
 
 app.post('/person_entry', function(req,res){
 
