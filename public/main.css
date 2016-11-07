@@ -1,10 +1,14 @@
 body {
-	font-size: 16px;
+	font-size: 24px;
 	font-family: 'Robot', sans-serif;
 	color: black;
-	background: url(http://media.istockphoto.com/photos/travelling-tools-picture-id489556478?k=6&m=489556478&s=170667a&w=0&h=IwZFU4xlD6yEjpSYpYL0TQZn-qgNEJUs4MWYoU56VMU=);
+	background: url(https://static.pexels.com/photos/34020/pexels-photo.jpg);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	text-align: center;
+	margin-top: 250px;
 }
 
 h1 {
-	color: blue;
+	color: rgb(255,255,255);
 }

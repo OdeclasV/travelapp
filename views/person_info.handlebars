@@ -1,9 +1,21 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.debug.js"></script>
 
+<style>
+  .person_info {
+  	color: rgb(255,255,255);
+  }
+
+  .new_traveler {
+  	color: rgb(0,0,0)
+  }
+
+
+</style>
+
   <section id= "person_submit">
         
        <div class="person_info"> You have added the following traveler</div>
-       <div>
+       <div class="new_traveler">
            <p>Name: {{this.name}}</p>
            <p>Last Name: {{this.last_name}}</p>
            <p>Date: {{this.date}}</p>
