@@ -4,7 +4,9 @@ var bodyParser = require('body-parser')
 var handlebrs = require('express-handlebars')
 var mongoose = require('mongoose')
 
-var uristring = "mongodb://heroku_fwpbd99q:mqqn40e20u5lfrudac4ac2i519@ds161295.mlab.com:61295/heroku_fwpbd99q"
+var uristring = "mongodb://heroku_hzlphnml:qgsie3j67d9fk2omoc2dcsnd8v@ds147167.mlab.com:47167/heroku_hzlphnml"
+
+// var uristring = "mongodb://vsalcedo:VICtor2206@ds033107.mlab.com:33107/trav3lapp" 
 
 //Connecting to my DB using Mongoose
 
